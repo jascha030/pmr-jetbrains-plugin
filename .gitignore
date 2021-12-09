@@ -1,2 +1,9 @@
+# JetBrains 
 .idea
+
+# Gradle
 .gradle
+
+# Kotlin/Java
+/build/
+
