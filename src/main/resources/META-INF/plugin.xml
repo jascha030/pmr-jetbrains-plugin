@@ -12,10 +12,10 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <statusBarWidgetFactory implementation="io.jascha030.pmr.ui.PMRStatusBarWidgetFactory" order="first" />
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
+
     </actions>
 </idea-plugin>
