@@ -5,17 +5,17 @@ import com.intellij.openapi.wm.StatusBar
 import com.intellij.openapi.wm.StatusBarWidget
 import com.intellij.openapi.wm.StatusBarWidgetFactory
 
+private const val pmrWidgetId: String = "pmrWidget"
+
 class PMRStatusBarWidgetFactory: StatusBarWidgetFactory {
-    override fun getId(): String {
-        TODO("Not yet implemented")
-    }
+    override fun getId(): String = pmrWidgetId
 
     override fun getDisplayName(): String {
-        TODO("Not yet implemented")
+        return "PMR"
     }
 
     override fun isAvailable(project: Project): Boolean {
-        TODO("Not yet implemented")
+        return true
     }
 
     override fun createWidget(project: Project): StatusBarWidget {
