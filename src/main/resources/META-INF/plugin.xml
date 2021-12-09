@@ -1,11 +1,10 @@
 <idea-plugin>
     <id>io.jascha030.pmr</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <name>PMR - Project Management Resources</name>
+    <vendor email="contact@jaschavanaalst.nl">Jascha030</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    Quick access to your Project Management Resources from your Jetbrains IDE.
     ]]></description>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
