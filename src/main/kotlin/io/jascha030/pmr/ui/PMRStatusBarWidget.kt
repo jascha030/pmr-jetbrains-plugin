@@ -1,6 +1,8 @@
 package io.jascha030.pmr.ui
 
+import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.project.Project
+import com.intellij.openapi.ui.popup.JBPopupFactory
 import com.intellij.openapi.ui.popup.ListPopup
 import com.intellij.openapi.util.Disposer
 import com.intellij.openapi.wm.StatusBar
@@ -25,15 +27,12 @@ class PMRStatusBarWidgetFactory : StatusBarWidgetFactory {
     override fun canBeEnabledOn(statusBar: StatusBar): Boolean = true
 }
 
-private class PMRStatusBarWidget(private val project: Project) : StatusBarWidget, StatusBarWidget.MultipleTextValuesPresentation {
-    private var statusBar: StatusBar? = null
-    private var selectedValue: String? = null
+private class PMRStatusBarWidget(private val project: Project) :
+    StatusBarWidget,
+    StatusBarWidget.MultipleTextValuesPresentation {
+    private lateinit var statusBar: StatusBar
 
     override fun ID(): String = WIDGET_ID
-
-    override fun dispose() {
-        statusBar = null
-    }
 
     override fun install(statusBar: StatusBar) {
         this.statusBar = statusBar;
@@ -42,15 +41,22 @@ private class PMRStatusBarWidget(private val project: Project) : StatusBarWidget
 
     override fun getPresentation(): StatusBarWidget.WidgetPresentation = this
 
-    override fun getTooltipText(): String = "Quick access to resources"
+    override fun getTooltipText(): String = "PMR quick access"
 
-    override fun getClickConsumer(): Consumer<MouseEvent>? {
-        TODO("Not yet implemented")
-    }
+    override fun getClickConsumer(): Consumer<MouseEvent>? = null
 
     override fun getPopupStep(): ListPopup? {
         TODO("Not yet implemented")
+        //        JBPopupFactory.getInstance().createActionGroupPopup(
+        //            "Resources",
+        //            "",
+        //            ""
+        //        )
     }
 
-    override fun getSelectedValue(): String? = this.selectedValue
+    override fun getSelectedValue(): String? {
+        TODO("Not yet implemented")
+    }
+
+    override fun dispose() {}
 }

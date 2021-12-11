@@ -3,9 +3,9 @@
     <name>PMR - Project Management Resources</name>
     <vendor email="contact@jaschavanaalst.nl">Jascha030</vendor>
 
-    <description><![CDATA[
-    Quick access to your Project Management Resources from your Jetbrains IDE.
-    ]]></description>
+    <description>
+        <![CDATA[Quick access to your Project Management Resources from your Jetbrains IDE.]]>
+    </description>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
@@ -16,6 +16,8 @@
     </extensions>
 
     <actions>
-
+        <group id="io.jascha030.pmr.ui.ResourceActions" class="io.jascha030.pmr.action.ResourceActionGroup"
+               text="PM Resources" icon="AllIcons.General.ShowInfos">
+        </group>
     </actions>
 </idea-plugin>
