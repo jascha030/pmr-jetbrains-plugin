@@ -12,4 +12,10 @@ abstract class GoToResourceAction : AnAction() {
             BrowserUtil.browse(it)
         }
     }
+
+    override fun update(e: AnActionEvent) {
+        getResourceURI().let {
+            e.presentation.isEnabled = (it != null)
+        }
+    }
 }
