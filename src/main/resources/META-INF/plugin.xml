@@ -12,12 +12,9 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <statusBarWidgetFactory implementation="io.jascha030.pmr.ui.PMRStatusBarWidgetFactory" order="first" />
+        <statusBarWidgetFactory implementation="io.jascha030.pmr.ui.PMRStatusBarWidgetFactory" order="last" />
     </extensions>
 
     <actions>
-        <group id="io.jascha030.pmr.ui.ResourceActions" class="io.jascha030.pmr.action.ResourceActionGroup"
-               text="PM Resources" icon="AllIcons.General.ShowInfos">
-        </group>
     </actions>
 </idea-plugin>
